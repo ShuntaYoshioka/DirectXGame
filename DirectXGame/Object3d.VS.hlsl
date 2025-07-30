@@ -1,5 +1,4 @@
 #include "Object3d.hlsli"
-//P38まで
 
 struct TransformationMatrix
 {
