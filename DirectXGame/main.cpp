@@ -1217,10 +1217,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			ImGui::ShowDemoWindow();
 
 			ImGui::Begin("Settings");
+
 			ImGui::ColorEdit4("material", &materialData->x, ImGuiColorEditFlags_AlphaPreview);
-			ImGui::DragFloat("translate.x", &transformSprite.translate.x, 0.5f);
-			ImGui::DragFloat("translate.y", &transformSprite.translate.y, 0.5f); 
+			ImGui::DragFloat3("TextureScale", &transformSprite.scale.x, 0.1f);
+			ImGui::DragFloat3("TextureRotate", &transformSprite.rotate.x, 0.1f);
+			ImGui::DragFloat3("TextureTranslate", &transformSprite.translate.x, 0.5f);
 			ImGui::DragFloat("rotate.y", &transform.rotate.y, 0.1f);
+			
 			ImGui::End();
 
 			ImGui::Render();
