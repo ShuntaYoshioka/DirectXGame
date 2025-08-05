@@ -1218,6 +1218,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			ImGui::Begin("Settings");
 			ImGui::ColorEdit4("material", &materialData->x, ImGuiColorEditFlags_AlphaPreview);
+			ImGui::DragFloat("translate.x", &transformSprite.translate.x, 0.5f);
+			ImGui::DragFloat("translate.y", &transformSprite.translate.y, 0.5f); 
 			ImGui::DragFloat("rotate.y", &transform.rotate.y, 0.1f);
 			ImGui::End();
 
